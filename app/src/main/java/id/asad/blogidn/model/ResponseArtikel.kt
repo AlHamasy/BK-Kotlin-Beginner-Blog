@@ -1,6 +1,8 @@
 package id.asad.blogidn.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 data class ResponseArtikel(
 
@@ -14,6 +16,7 @@ data class ResponseArtikel(
 	val status: Boolean? = null
 )
 
+@Parcelize
 data class DataArtikelItem(
 
 	@field:SerializedName("tgl_posting")
@@ -33,4 +36,5 @@ data class DataArtikelItem(
 
 	@field:SerializedName("isi")
 	val isi: String? = null
-)
+
+):Parcelable
